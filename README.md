@@ -1,2 +1,5 @@
-# web-dev-cohort-2026
-Web Dev Cohort 2026 assignments: blog peer reviews and HTML resume.
+# Web Dev Cohort 2026 Assignments
+
+This repository contains:
+- Blog peer review links (Git, Networking, DNS, HTML/CSS)
+- HTML Resume Page built using HTML and CSS
