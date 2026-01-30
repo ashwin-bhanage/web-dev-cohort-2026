@@ -1,6 +1,6 @@
 # HTML Resume Page
 
-Single-page resume built using HTML.
+Single-page portfolio built using HTML.
 
 ## How to run
 Open index.html in any browser.
