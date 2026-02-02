@@ -1,126 +1,288 @@
 /* =========================
-  Base / Reset
-  ========================= */
+   Base / Reset
+   ========================= */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
+:root {
   font-size: 16px;
 }
 
+@font-face {
+  font-family: "CursorGothic";
+  src: url(./cursor-brand-assets/CursorGothic-main/CursorGothic-main/fonts/CursorGothic-Regular.woff2) format(woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #14120B;
+  background-color: #14120b;
   color: #ffffff;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'CursorGothic', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* =========================
-  Header
-  ========================= */
+   Global Layout Wrapper
+   ========================= */
+
+.layout-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+/* =========================
+   Header
+   ========================= */
 
 header {
-  width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  z-index: 50;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #14120b;
+  padding: 16px 0;
 }
 
-/* =========================
-  Main Nav Container
-  ========================= */
-
-.main-content {
-  margin-left: 178px;
-  margin-right: 178px;
+.header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
-  text-align: center;
+  height: 40px;
 }
-
-/* =========================
-  Logo
-  ========================= */
 
 .logo-div img {
   display: block;
   width: 96px;
-  height: 25px;
-}
-
-/* =========================
-   Navigation Links
-   ========================= */
-
-nav {
-  display: flex;
+  height: auto;
 }
 
 .nav-links-list {
   display: flex;
+  justify-content: space-between;
   gap: 8px;
   list-style: none;
+  margin: 0 auto;
 }
-
 
 .nav-links-list a {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 5px 15px;
+  color: #adb1b8;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 10px;
 }
 
 .nav-links-list a:hover {
-  opacity: 0.8;
+  color: #ffffff;
 }
-
-/* =========================
-   CTA Buttons
-   ========================= */
 
 .cta-buttons {
   display: flex;
+  align-items: center;
   gap: 12px;
 }
 
 .cta-buttons button {
   background: transparent;
-  color: #ffffff;
-  border: 0.5px solid rgba(255, 255, 255, 0.2);;
-  border-radius: 24px;
-  font-size: 0.875rem;
+  color: #eeeeef;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 13px;
   font-weight: 500;
-  padding: 5.4px 10.5px 5.8px 10.5px;
+  padding: 6px 14px;
   cursor: pointer;
-
+  transition: all 0.2s ease;
 }
 
-.cta-buttons button:last-child {
-  background-color: #ffffff;
-  color: #0b0b0c;
-  border-radius: 24px;
-  padding: 6px 14px;
-  padding: 5px 12px 5px 12px;
-  cursor: pointer;
+.btn-primary {
+  background-color: #ffffff !important;
+  color: #0b0b0c !important;
+  border: none !important;
 }
 
 .cta-buttons button:hover {
-  opacity: 0.85;
+  opacity: 0.9;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+
+.hero-main {
+  padding: 112px 0 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero-title {
+  max-width: 720px;
+}
+
+.hero-title h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  color: #eeeeef;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.download-btn {
+  background-color: #ffffff;
+  color: #0b0b0c;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  margin-top: 64px;
+  border-radius: 20px;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   Company Section
+   ========================= */
+
+.company-section {
+  padding: 80px 0;
+}
+
+.section-label {
+  font-size: 14px;
+  color: #adb1b8;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.company-logo-list {
+  display: flex;
+  gap: 18px;
+}
+
+.box {
+  background-color: #1c1c1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  width: 150px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 
 /* =========================
-  Main Content/ Hero Section
+   Feature Section
    ========================= */
 
-section{
-  padding: 112px 20px 0px 20px;
+.feature-section {
+  margin: 40px 0;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: #1d1b15;
+}
+
+.feature-grid1,
+.feature-grid2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.feature-grid2 {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text h3 {
+  color: #eeeeef;
+  font-size: 28px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.feature-text p {
+  font-size: 18px;
+  color: #adb1b8;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.feature-text2 {
+  flex: 1;
+}
+
+.feature-text2 h3 {
+  color: #eeeeef;
+  font-size: 28px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.feature-text2 p {
+  font-size: 18px;
+  color: #adb1b8;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.feature-link {
+  color: #bf4005;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.feature-link:hover {
+  opacity: 0.8;
+}
+
+.feature-visual {
+  flex: 1.5;
+}
+
+.feature-visual2 {
+  flex: 1.5;
+}
+
+.visual-card img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }

@@ -1,52 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="cursor-style.css" />
-    <link
-      rel="icon"
-      href="./cursor-brand-assets/App Icons/PNG/APP_ICON_25D_DARK.png"
-    />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="icon" href="./cursor-brand-assets/App Icons/PNG/APP_ICON_25D_DARK.png" />
     <title>Cursor</title>
   </head>
   <body>
+  <div class="layout-wrapper">
+
     <header>
-      <div class="main-content">
-        <!-- logo -->
+      <div class="header-content">
         <div class="logo-div">
-          <span class="logo-image">
-            <img
-              src="./cursor-brand-assets/General Logos/Lockup Horizontal/SVG/LOCKUP_HORIZONTAL_25D_DARK.svg"
-              alt="Cursor Text Logo"
-            />
-          </span>
+          <img src="./cursor-brand-assets/General Logos/Lockup Horizontal/SVG/LOCKUP_HORIZONTAL_25D_DARK.svg" alt="Cursor Logo" />
         </div>
-        <!-- nav -->
         <nav class="nav-links">
           <ul class="nav-links-list">
-            <li>
-              <a href="#">Features</a>
-            </li>
-            <li>
-              <a href="">Enterprise</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">Resources</a>
-            </li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Enterprise</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Resources</a></li>
           </ul>
         </nav>
-        <!-- primary -->
         <div class="cta-buttons">
-          <button>Sign in</button>
-          <button>Download</button>
+          <button class="btn-secondary">Sign in</button>
+          <button class="btn-primary">Download</button>
         </div>
       </div>
     </header>
-    
-  </body>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-main">
+        <div class="hero-title">
+          <h1>Built to make you extraordinarily productive,<span> Cursor is the best way to code with AI</span></h1>
+          <div class="hero-title-cta">
+            <button class="download-btn">Download for Windows</button>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="./cursor-brand-assets/product-images/Screenshot 2026-02-02 234020.png" alt="Cursor Interface Overview" />
+        </div>
+      </section>
+
+      <!-- Trusted Company -->
+      <section class="company-section">
+        <p class="section-label">Trusted every day by millions of professional developers.</p>
+        <div class="company-logo-list">
+          <div class="box">
+            <img src="https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/misc/asset-beae7a1f5d7eb381a872.svg" alt="Logo1">
+          </div>
+          <div class="box">
+            <img src="https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/misc/asset-53062f7690ae5b0cdbed.svg" alt="Logo2">
+          </div>
+          <div class="box"><img src="https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/misc/asset-eb9e0a5931092d4db1dd.svg" alt="Logo3"></div>
+          <div class="box"><img src="https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/misc/asset-da55192921531e5fd2ba.svg" alt="Logo4"></div>
+          <div class="box"><img src="https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/misc/asset-e3678011b17782740f98.svg" alt="Logo5"></div>
+          <div class="box"><img src="https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/misc/asset-105275382af564c3ab7c.svg" alt="Logo6"></div>
+          <div class="box"><img src="https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/misc/asset-cf60827b1c3f341d19ef.svg" alt="Logo7"></div>
+          <div class="box"><img src="https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/misc/asset-37d2d1a1edcce15ca38c.svg" alt="Logo8"></div>
+        </div>
+      </section>
+
+      <!-- Feature Card 1 -->
+      <section class="feature-section">
+        <div class="feature-grid1">
+          <div class="feature-text">
+            <h3 id="text-1">Agents turn ideas into code</h3>
+            <p>A human-AI programmer, orders of magnitude more effective than any developer alone.</p>
+            <a href="#" class="feature-link">Learn about Agent &rarr;</a>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-card">
+              <img src="./cursor-brand-assets/product-images/feature-1.png" alt="Cursor Agent in action" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Card 2 -->
+      <section class="feature-section">
+        <div class="feature-grid2">
+          <div class="feature-text2">
+            <h3 id="text-1">Magically accurate autocomplete</h3>
+            <p>Our custom Tab model predicts your next action with striking speed and precision.</p>
+            <a href="#" class="feature-link">Learn about Tabs &rarr;</a>
+          </div>
+          <div class="feature-visual2">
+            <div class="visual-card">
+              <img src="./cursor-brand-assets/product-images/feature-2.png" alt="Cursor Agent in action" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Card 3 -->
+      <section class="feature-section">
+        <div class="feature-grid1">
+          <div class="feature-text">
+            <h3 id="text-1">Everywhere software gets built</h3>
+            <p>Cursor is in GitHub reviewing your PRs, a teammate in Slack, and anywhere else you work.</p>
+            <a href="#" class="feature-link">Learn about Cursor's ecosystem &rarr;</a>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-card">
+              <img src="./cursor-brand-assets/product-images/feature-3.png" alt="Cursor Agent in action" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Testimonials
+       <section class="user-testimonials">
+        <h1>The new way to build software.</h1>
+       </section> -->
+
+    </main>
+
+    <footer>
+      </footer>
+  </div>
+</body>
 </html>
