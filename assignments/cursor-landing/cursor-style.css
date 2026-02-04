@@ -116,48 +116,71 @@ header {
    ========================= */
 
 .hero-main {
-  padding: 112px 0 64px 0;
+  padding: 120px 0 80px 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
+
 .hero-title {
-  max-width: 720px;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  text-align: start;
 }
 
 .hero-title h1 {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.1;
-  margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 40px;
   color: #eeeeef;
 }
 
 .hero-title span {
   display: block;
+  color: #adb1b8;
 }
 
+
 .download-btn {
+  display: flex;
+  align-items: start;
+  gap: 8px;
   background-color: #ffffff;
   color: #0b0b0c;
   border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
+  border-radius: 30px;
+  padding: 12px 28px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
 }
 
+.download-btn span{
+  color: #0b0b0c;
+  font-weight: 500;
+  font-size: 16px;
+  height: 100%;
+}
+
 .hero-image-wrapper {
   width: 100%;
-  margin-top: 64px;
-  border-radius: 20px;
+  margin-top: 80px;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
 }
 
 .hero-image-wrapper img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 6px;
 }
 
 /* =========================
@@ -170,7 +193,8 @@ header {
 
 .section-label {
   font-size: 14px;
-  color: #adb1b8;
+  font-weight: 100;
+  color: #eeeeef;
   letter-spacing: 0.1em;
   margin-bottom: 40px;
   text-align: center;
@@ -330,6 +354,7 @@ header {
 
 
 .testimonial-author {
+  flex-wrap:wrap ;
   display: flex;
   align-items: end;
   gap: 12px;
@@ -382,6 +407,10 @@ header {
   overflow: hidden;
 }
 
+.frontier-card:hover{
+  background-color: #1D1B15;
+}
+
 .card-content {
   padding: 24px;
   flex-grow: 1;
@@ -403,6 +432,10 @@ header {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
+}
+
+.explore-link:hover {
+  opacity: 0.8;
 }
 
 .card-image-box {
@@ -489,6 +522,9 @@ header {
   display: inline-block;
 }
 
+.view-all-link:hover {
+  opacity: 0.8;
+}
 
 /* =========================
   Secondary CTA
@@ -521,6 +557,7 @@ header {
   font-size: 14px;
   font-weight:500 ;
   font-family: inherit;
+  cursor: pointer;
 }
 
 .cta-image img{
@@ -575,16 +612,16 @@ header {
 }
 
 .highlight-title {
-  font-size: 18px;
+  font-size: 16px;
   color: #eeeeef;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-weight: 500;
 }
 
 .highlight-text {
   font-size: 15px;
   color: #adb1b8;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
 .highlight-meta {
@@ -601,12 +638,15 @@ header {
   display: inline-block;
 }
 
+.view-more-posts:hover {
+  opacity: 0.8;
+}
 /* =========================
   Downlaod CTA
 */
 
 .download-cta-section {
-  padding: 80px 0;
+  padding: 120px 0 80px 0;
   background-color: #14120B;
   width: 100%;
 }
@@ -616,7 +656,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin-top: 60px;
+  margin: 60px 0;
 }
 
 .download-cta-section h2 {
@@ -632,6 +672,7 @@ header {
   font-family: inherit;
   gap: 20px;
   border: #eeeeef;
+  height: 80%;
 }
 
 .download-cta-wrapper button{
@@ -641,4 +682,120 @@ header {
   border: none;
   font-size: 14px;
   font-weight:500 ;
+}
+
+
+/* =========================
+  Footer Section
+*/
+
+.site-footer{
+  margin: 0 auto;
+  padding: 80px 0 40px 0;
+  background-color: #1b1913;
+}
+
+.footer-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+
+.footer-column h4{
+  color: #989895;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li a{
+  margin-bottom: 12px;
+  color: #DEDCDC;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.footer-bottom{
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 40px;
+}
+
+.footer-info {
+  display: flex;
+  align-items:center;
+  gap: 20px;
+  color: #989895;
+  font-size: 14px;
+}
+
+.footer-info span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.soc2-badge{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.soc2-badge:hover{
+  color: #ffffff;
+}
+
+.footer-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-toggle {
+  color: #E5E3E3;
+  background-color: #1a1812;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2px 3px;
+  display: flex;
+}
+
+.theme-toggle button {
+  background: transparent;
+  border: none;
+  color: #adb1b8;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle button.active {
+  background-color: #2a2822;
+  color: #eeeeef;
+}
+
+.language-picker {
+  background-color: #1a1812;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 8px 12px;
+  color: #eeeeef;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-family: inherit;
 }
