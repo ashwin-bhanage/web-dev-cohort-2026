@@ -148,15 +148,14 @@ header {
 
 .download-btn {
   display: flex;
-  align-items: start;
-  gap: 8px;
-  background-color: #ffffff;
-  color: #0b0b0c;
+  align-items: center;
+  font-family: inherit;
+  gap: 4px;
+  padding: 10px 20px;
+  border-radius: 20px;
   border: none;
-  border-radius: 30px;
-  padding: 12px 28px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 300;
   cursor: pointer;
 }
 
