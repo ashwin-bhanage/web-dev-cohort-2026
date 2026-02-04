@@ -181,6 +181,7 @@ header {
   height: auto;
   display: block;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 /* =========================
