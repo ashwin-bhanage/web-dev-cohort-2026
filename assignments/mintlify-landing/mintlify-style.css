@@ -18,31 +18,53 @@ body {
   background-image: url("./assets/bg-light.svg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+  inset: 0;
+  mask-image: linear-gradient(to bottom transparent 100%);
+  position: relative;
 }
 
 .layout-wrapper {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 24px;;
 }
 
 /* Header Styling */
+
+@keyframes text-color-swap {
+  from {
+    color: #ffffff;
+  }
+  to {
+    color: #000000;
+  }
+}
+
 .mint-header {
   position: sticky;
   top: 0;
+  width: 100%;
+  height: 70px;
   z-index: 100;
-  padding: 12px 0;
-  background-color: transparent;
-  backdrop-filter: blur(10px);
-  margin:  auto;
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  background: transparent;
+  backdrop-filter: blur(14px);
+  animation: text-color-swap linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 100px;
 }
 
+
 .header-inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 60px;
 }
 
 .mint-logo {
@@ -109,7 +131,7 @@ body {
 
 /* Hero Styling */
 .hero-section {
-  padding: 60px 0 160px 0;
+  padding: 60px 0 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,7 +145,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(32, 31, 31, 0.3);
-  padding: 4px 12px;
+  padding: 3px 4px;
   border-radius: 20px;
   font-size: 14px;
   margin-bottom: 24px;
@@ -147,15 +169,18 @@ body {
 .hero-content h1 {
   max-width: 43rem;
   font-size: 62px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin: 24px 0;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  margin: 10px 0;
+  text-wrap: balance;
+  text-align: center;
 }
 
 .hero-content p {
-  font-size: 20px;
+  font-size: 18 px;
   max-width: 30rem;
-  margin: 0 auto 48px;
+  margin: 0 auto 30px;
   /* line-height: 1.5; */
 }
 
@@ -165,9 +190,9 @@ body {
   justify-content: space-evenly;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 6px;
+  padding: 4px;
   border-radius: 50px;
-  max-width: 70%;
+  max-width: 23rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -177,10 +202,16 @@ input[type="email"] {
     border: none;
     outline: none;
     padding: 8px 12px;
-    color: #ffffff;
+    color: #FFFFFF;
+    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
   }
+
+.input-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 
 .btn-three{
   font-family: inherit;
@@ -192,4 +223,29 @@ input[type="email"] {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+}
+
+
+.hero-image-cta{
+  margin: 0 auto;
+  border-radius: 30px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+}
+
+.image-cta-wrapper{
+  margin: auto;
+  border-radius: 30px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-cta-wrapper img{
+  max-width: 100%;
+  display: block;
+  border-radius: 30px;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
