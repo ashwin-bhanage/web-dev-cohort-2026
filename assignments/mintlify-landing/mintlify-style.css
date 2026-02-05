@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+
+:root{
+  --font-geist: 'Geist Mono';
+}
 
 * {
   margin: 0;
@@ -16,29 +22,29 @@ body {
 /* Background Wrapper for both Header and Hero */
 .top-banner-wrapper {
   background-image: url("./assets/bg-light.svg");
-  background-size: cover;
-  background-position: center;
-  inset: 0;
-  mask-image: linear-gradient(to bottom transparent 100%);
-  position: relative;
+  background-size: contain;
+  background-position: -2em 0.1em;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100pc;
 }
 
 .layout-wrapper {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;;
+  padding: 0 24px;
 }
 
 /* Header Styling */
 
-@keyframes text-color-swap {
+/* @keyframes text-color-swap {
   from {
     color: #ffffff;
   }
   to {
     color: #000000;
   }
-}
+} */
 
 .mint-header {
   position: sticky;
@@ -50,12 +56,13 @@ body {
   color: #ffffff;
   align-items: center;
   justify-content: space-between;
-  transition: all 0.3s ease;
   background: transparent;
   backdrop-filter: blur(14px);
-  animation: text-color-swap linear both;
+
+  /* For the scroll animations text color change */
+  /* animation: text-color-swap linear both;
   animation-timeline: scroll();
-  animation-range: 0px 100px;
+  animation-range: 0px 100px; */
 }
 
 
@@ -135,8 +142,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: transparent;
   text-align: center;
+  /* mask-image: linear-gradient(to bottom, black 50%, transparent 100%); */
+  /* mix-blend-mode: overlay; */
 }
 
 .badge-main {
@@ -163,6 +171,7 @@ body {
   padding: 3px 6px;
   border-radius: 12px;
   font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -178,10 +187,10 @@ body {
 }
 
 .hero-content p {
-  font-size: 18 px;
+  font-size: 18px;
   max-width: 30rem;
   margin: 0 auto 30px;
-  /* line-height: 1.5; */
+  line-height: 1.5;
 }
 
 .input-container{
@@ -193,7 +202,7 @@ body {
   padding: 4px;
   border-radius: 50px;
   max-width: 23rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 input[type="email"] {
@@ -249,3 +258,113 @@ input[type="email"] {
   border-radius: 30px;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
+
+
+/* Company Section */
+.company-section {
+  border: 2px solid red;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.company-list-content{
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Logo Section */
+.logo-section{
+  padding: 80px 20px 130px 20px;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+/*
+.logo-grid-wrapper{
+  width: 1200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.logo-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 64rem;
+  width: 100%;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.logo-item #perplexity{
+  width: 120px;
+}
+
+.logo-item #x{
+  height: 24px;
+}
+
+/* Secondary Layout */
+.secondary-layout{
+  color: black;
+  background-color: grey;
+  max-width: 1026px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.meta-header{
+  padding: 25px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.meta-header h2 {
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  padding: 1.4px 0;
+  margin-top: 30px;
+}
+
+.meta-header p {
+  letter-spacing: -0.02em;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 3rem;
+  margin-bottom: 20px;
+}
+
