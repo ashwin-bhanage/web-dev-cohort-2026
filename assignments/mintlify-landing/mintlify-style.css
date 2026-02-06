@@ -28,22 +28,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 /* Background Wrapper for both Header and Hero */
 .top-banner-wrapper {
   background-image: url("./assets/bg-light.svg");
   background-size: contain;
-  background-position: -2em 0em;
   background-repeat: no-repeat;
   min-height: 100vh;
-  width: 100pc;
+  width: 100%;
 }
-
-.layout-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
 /* Header Styling */
 
 /* @keyframes text-color-swap {
@@ -62,9 +60,7 @@ body {
   height: 70px;
   z-index: 100;
   display: flex;
-  color: #ffffff;
   align-items: center;
-  justify-content: space-between;
   background: transparent;
   backdrop-filter: blur(14px);
 
@@ -76,7 +72,6 @@ body {
 
 
 .header-inner {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,8 +80,6 @@ body {
 
 .mint-logo {
   height: 24px;
-  width: auto;
-  display: block;
 }
 
 .nav-links {
@@ -101,8 +94,6 @@ body {
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
-  opacity: 0.8;
-  transition: opacity 0.2s;
   padding: 10px 12px;
   border-radius: 20px;
 }
@@ -149,10 +140,7 @@ body {
 
 /* Hero Styling */
 .hero-section {
-  padding: 60px 0 100px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 60px 0 100px;
   text-align: center;
   /* mask-image: linear-gradient(to bottom, black 50%, transparent 100%); */
   /* mix-blend-mode: overlay; */
@@ -384,7 +372,7 @@ input[type="email"] {
 /* Feature Card */
 .feature-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
@@ -432,22 +420,19 @@ input[type="email"] {
   align-items: center;
 }
 
-.card-image img{
+.card-image img,
+.video-card video {
+  margin: 0;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+img,
+video {
   max-width: 100%;
-  margin: 40px;
+  height: auto;
+  display: block;
 }
-
-.video-card{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.video-card video{
-  margin: 40px;
-  max-width: 100%;
-}
-
 
 /* Assistant Section */
 .assistant-section{
@@ -508,9 +493,10 @@ input[type="email"] {
 }
 
 .assistant-video video{
-  margin: 40px;
-  padding: 20px;
-  object-fit: cover;
+  margin: 0;
+  padding: 40px;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 /* Second Main Layout  */
@@ -643,7 +629,7 @@ input[type="email"] {
   position: relative;
   z-index: 2;
   height: 100%;
-  padding: 60px;
+  padding: clamp(20px, 5vw, 60px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -685,7 +671,8 @@ input[type="email"] {
 /* Logo Cloud */
 .logo-cloud {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
   padding: 10px 0;
@@ -735,18 +722,14 @@ input[type="email"] {
 
 /* Scroll Card */
 .stories-container {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  overflow-x: auto;
-  justify-content: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .story-card {
-  display: flex;
-  flex-direction: column;
-  align-self: start;
-  flex: 0 0 380px;
+  flex: 1 1 auto;
+  max-width: 100%;
 }
 
 .card-header-scroll {
