@@ -32,7 +32,7 @@ body {
 .top-banner-wrapper {
   background-image: url("./assets/bg-light.svg");
   background-size: contain;
-  background-position: -2em 0.1em;
+  background-position: -2em 0em;
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100pc;
