@@ -722,14 +722,18 @@ video {
 
 /* Scroll Card */
 .stories-container {
-  max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  max-width: 80%;
+  justify-content: end;
+  margin-left: 20rem;
 }
 
 .story-card {
-  flex: 1 1 auto;
+  width: 100%;
   max-width: 100%;
+  overflow: hidden;
 }
 
 .card-header-scroll {
@@ -745,6 +749,8 @@ video {
 .bg-image {
   width: 100%;
   border-radius: 24px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .logo-wrapper {
