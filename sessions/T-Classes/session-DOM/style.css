@@ -1,0 +1,13 @@
+li{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+ul {
+    background-color: pink;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
