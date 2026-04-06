@@ -1,0 +1,66 @@
+Product {
+  product_id int pk
+  name varchar
+  description text
+  category varchar
+  base_price decimal
+  product_type varchar // THRIFT | HANDMADE
+}
+
+Product_Variant {
+  variant_id int pk
+  product_id int fk > Product.product_id
+  size varchar
+  color varchar
+}
+
+Inventory_Item {
+  inventory_id int pk
+  variant_id int fk > Product_Variant.variant_id
+  quantity_available int
+  is_unique boolean
+  condition varchar
+  created_at datetime
+}
+
+Customer {
+  customer_id int pk
+  name varchar
+  phone varchar
+  email varchar
+  address text
+}
+
+Orders {
+  order_id int pk
+  customer_id int fk > Customer.customer_id
+  order_date datetime
+  total_amount decimal
+  order_status varchar // PLACED | CONFIRMED | CANCELLED
+}
+
+Order_Item {
+  order_item_id int pk
+  order_id int fk > Orders.order_id
+  inventory_id int fk > Inventory_Item.inventory_id
+  quantity int
+  price_at_purchase decimal
+}
+
+Payment {
+  payment_id int pk
+  order_id int fk > Orders.order_id
+  payment_method varchar // UPI | COD | CARD
+  payment_status varchar // PENDING | COMPLETED | FAILED
+  payment_date datetime
+}
+
+Shipment {
+  shipment_id int pk
+  order_id int fk > Orders.order_id
+  shipping_address text
+  shipping_status varchar // PENDING | SHIPPED | DELIVERED
+  tracking_number varchar
+  shipped_date datetime
+  delivered_date datetime
+}
