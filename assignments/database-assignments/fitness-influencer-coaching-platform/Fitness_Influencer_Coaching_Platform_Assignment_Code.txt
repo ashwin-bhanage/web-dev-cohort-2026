@@ -1,0 +1,89 @@
+User {
+  user_id int pk
+  name varchar
+  email varchar
+  phone varchar
+  role varchar // TRAINER | CLIENT
+  created_at datetime
+}
+
+Trainer_Profile {
+  trainer_id int pk
+  user_id int fk > User.user_id
+  bio text
+  experience_years int
+  specialization varchar
+}
+
+Client_Profile {
+  client_id int pk
+  user_id int fk > User.user_id
+  age int
+  gender varchar
+  height decimal
+  fitness_goal varchar
+}
+
+Plan {
+  plan_id int pk
+  trainer_id int fk > Trainer_Profile.trainer_id
+  name varchar
+  description text
+  price decimal
+  duration_days int
+  plan_type varchar // CONSULTATION | COACHING | CUSTOM
+}
+
+Subscription {
+  subscription_id int pk
+  client_id int fk > Client_Profile.client_id
+  plan_id int fk > Plan.plan_id
+  start_date datetime
+  end_date datetime
+  status enum // ACTIVE | EXPIRED | CANCELLED
+}
+
+Payment {
+  payment_id int pk
+  subscription_id int fk > Subscription.subscription_id
+  amount decimal
+  payment_method enum // UPI | CARD | NETBANKING
+  payment_status enum // SUCCESS | FAILED | PENDING
+  payment_date datetime
+}
+
+Session {
+  session_id int pk
+  trainer_id int fk > Trainer_Profile.trainer_id
+  client_id int fk > Client_Profile.client_id
+  session_type varchar // CONSULTATION | LIVE | FOLLOWUP
+  scheduled_at datetime
+  status enum // SCHEDULED | COMPLETED | MISSED
+  meeting_link text
+}
+
+Check_In {
+  checkin_id int pk
+  client_id int fk > Client_Profile.client_id
+  submission_date datetime
+  notes text
+}
+
+Progress_Record {
+  progress_id int pk
+  checkin_id int fk > Check_In.checkin_id
+  weight decimal
+  body_fat_percentage decimal
+  chest decimal
+  waist decimal
+  arms decimal
+  photos_url text
+}
+
+Trainer_Notes {
+  note_id int pk
+  checkin_id int fk > Check_In.checkin_id
+  trainer_id int fk > Trainer_Profile.trainer_id
+  feedback text
+  created_at datetime
+}
